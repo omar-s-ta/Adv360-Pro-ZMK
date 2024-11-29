@@ -34,3 +34,89 @@
     #binding-cells = <0>;
     bindings = <&kp LS(K)>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
   };
+  _tmux_L: macro_tmux_leader {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_leader";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>;
+  };
+  _tmux_NW: macro_tmux_new_window {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_new_window";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp C>;
+  };
+  _tmux_CW: macro_tmux_close_window {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_close_window";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp AMPS>;
+  };
+  _tmux_NXT: macro_tmux_next_window {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_next_window";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp N>;
+  };
+  _tmux_PRV: macro_tmux_prev_window {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_prev_window";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp P>;
+  };
+  _tmux_RN: macro_tmux_rename_window {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_rename_window";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp COMMA>;
+  };
+  _tmux_SPLTV: macro_tmux_split_v {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_split_v";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp PRCNT>;
+  };
+  _tmux_SPLTH: macro_tmux_split_h {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_split_h";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp DQT>;
+  };
+  _tmux_P_L: macro_tmux_pane_left {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_pane_left";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp H>;
+  };
+  _tmux_P_D: macro_tmux_pane_down {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_pane_down";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp J>;
+  };
+  _tmux_P_U: macro_tmux_pane_up {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_pane_up";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp K>;
+  };
+  _tmux_P_R: macro_tmux_pane_right {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_pane_right";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp L>;
+  };
+  _cmd_alt_hold: macro_cmd_alt_hold {
+    compatible = "zmk,behavior-hold-tap";
+    label = "macro_cmd_alt_hold";
+    #binding-cells = <2>;
+    bindings = <&kp LGUI &kp LALT>;
+    tapping-term-ms = <200>;
+  };
+  _cmd_alt_n: macro_cmd_alt_n {
+    compatible = "zmk,behavior-macro";
+    label = "macro_cmd_alt_n";
+    #binding-cells = <0>;
+    bindings = <&macro_cmd_alt_hold &kp N>;
+  };
+

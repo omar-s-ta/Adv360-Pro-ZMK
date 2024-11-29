@@ -117,6 +117,6 @@
     compatible = "zmk,behavior-macro";
     label = "macro_cmd_alt_n";
     #binding-cells = <0>;
-    bindings = <&macro_cmd_alt_hold &kp N>;
+    bindings = <&_cmd_alt_hold &kp N>;
   };
 

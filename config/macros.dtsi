@@ -106,17 +106,10 @@
     #binding-cells = <0>;
     bindings = <&kp LC(S)>, <&kp L>;
   };
-  _cmd_alt_hold: macro_cmd_alt_hold {
-    compatible = "zmk,behavior-hold-tap";
-    label = "macro_cmd_alt_hold";
-    #binding-cells = <2>;
-    bindings = <&kp LGUI &kp LALT>;
-    tapping-term-ms = <200>;
-  };
   _cmd_alt_n: macro_cmd_alt_n {
     compatible = "zmk,behavior-macro";
     label = "macro_cmd_alt_n";
     #binding-cells = <0>;
-    bindings = <&_cmd_alt_hold &kp N>;
+    bindings = <&macro_press &kp LGUI>, <&macro_press &kp LALT>, <&macro_tap &kp N>, <&macro_release &kp LALT>, <&macro_release &kp LGUI>;
   };
 

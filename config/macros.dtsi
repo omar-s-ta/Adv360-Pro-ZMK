@@ -106,10 +106,15 @@
     #binding-cells = <0>;
     bindings = <&kp LC(S)>, <&kp L>;
   };
+  _nvim_SPLTV: macro_nvim_split_v {
+    compatible = "zmk,behavior-macro";
+    label = "macro_nvim_split_v";
+    #binding-cells = <0>;
+    bindings = <&kp SPACE>, <&kp LS(BSLH)>;
+  };
   _cmd_alt_n: macro_cmd_alt_n {
     compatible = "zmk,behavior-macro";
     label = "macro_cmd_alt_n";
     #binding-cells = <0>;
     bindings = <&macro_press &kp LGUI>, <&macro_press &kp LALT>, <&macro_tap &kp N>, <&macro_release &kp LALT>, <&macro_release &kp LGUI>;
   };
-

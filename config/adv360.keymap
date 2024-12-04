@@ -51,11 +51,11 @@
     };
     fn {
       bindings = <
-        &kp F1    &kp F2        &kp F3        &kp F4          &kp F5        &kp F6           &tog 1                                                             &mo 3 &kp F7    &kp F8      &kp F9      &kp F10    &kp F11     &kp F12
-        &trans    &macro_quotes &trans        &trans          &trans        &macro_braces    &none                                                              &none &kp LBRC  &kp RBRC    &trans      &trans     &trans      &_nvim_SPLTV
-        &_tmux_CW &_cmd_alt_n   &_tmux_SPLTV  &macro_dquotes  &trans        &macro_parens    &none         &_tmux_L     &trans    &kp C_MUTE    &_tmux_L        &none &kp LEFT  &kp DOWN    &kp UP      &kp RIGHT  &_tmux_RN   &trans
-        &trans    &trans        &trans        &_tmux_NW       &_tmux_SPLTH  &macro_brackets                             &kp HOME  &kp C_VOL_UP                        &kp LPAR  &kp RPAR    &kp LBKT    &kp RBKT   &trans      &trans
-        &trans    &trans        &trans        &_tmux_P_L      &_tmux_P_R                             &_tmux_PRV &kp DEL &kp END   &kp C_VOL_DN  &trans &_tmux_NXT               &_tmux_P_D  &_tmux_P_U  &trans     &trans      &trans
+        &kp F1    &kp F2        &kp F3       &kp F4         &kp F5        &kp F6          &tog 1                                                         &mo 3 &kp F7  &kp F8      &kp F9      &kp F10 &kp F11       &kp EQUAL 
+        &trans    &macro_quotes &trans       &trans         &macro_braces &trans          &none                                                          &none &trans  &kp LPAR    &kp RPAR    &trans  &macro_parens &_nvim_SPLTV
+        &_tmux_CW &_cmd_alt_n   &_tmux_SPLTV &macro_dquotes &trans        &trans          &none       &_tmux_L     &trans   &kp C_MUTE   &_tmux_L        &none &trans  &kp LBRC    &kp RBRC    &trans  &_tmux_RN     &trans
+        &trans    &trans        &trans       &_tmux_NW      &_tmux_SPLTH  &macro_brackets                          &kp HOME &kp C_VOL_UP                       &trans  &kp LBKT    &kp RBKT    &trans  &trans        &trans
+        &trans    &trans        &trans       &trans         &trans                              &_tmux_PRV &kp DEL &kp END  &kp C_VOL_DN &trans &_tmux_NXT             &_cmd_alt_D &_cmd_alt_U &trans  &trans        &trans
       >;
     };
     mod {

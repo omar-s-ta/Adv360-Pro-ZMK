@@ -118,3 +118,15 @@
     #binding-cells = <0>;
     bindings = <&macro_press &kp LGUI>, <&macro_press &kp LALT>, <&macro_tap &kp N>, <&macro_release &kp LALT>, <&macro_release &kp LGUI>;
   };
+  _cmd_alt_U: macro_cmd_alt_up {
+    compatible = "zmk,behavior-macro";
+    label = "macro_cmd_alt_up";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LGUI>, <&macro_press &kp LALT>, <&macro_tap &kp UP>, <&macro_release &kp LALT>, <&macro_release &kp LGUI>;
+  };
+  _cmd_alt_D: macro_cmd_alt_down {
+    compatible = "zmk,behavior-macro";
+    label = "macro_cmd_alt_down";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LGUI>, <&macro_press &kp LALT>, <&macro_tap &kp DOWN>, <&macro_release &kp LALT>, <&macro_release &kp LGUI>;
+  };

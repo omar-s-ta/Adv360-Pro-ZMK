@@ -16,6 +16,8 @@
       };
       #endif
 
+      // hold will apply the first argument
+      // tap will apply the second argument
       hm: homerow_mods {
           compatible = "zmk,behavior-hold-tap";
           #binding-cells = <2>;

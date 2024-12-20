@@ -161,12 +161,12 @@
   _vim_EXIT: macro_vim_exit {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-    bindings = <&kp ESC>, <&kp ESC>, <&kp ESC>, <&kp ESC>, <&kp COLON>, <&kp Q>;
+    bindings = <&kp ESC>, <&kp ESC>, <&kp ESC>, <&kp ESC>, <&kp COLON>, <&kp Q>, <&kp ENTER>;
   };
   _vim_SAVE: macro_vim_save {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-    bindings = <&kp ESC>, <&kp ESC>, <&kp ESC>, <&kp ESC>, <&kp COLON>, <&kp W>;
+    bindings = <&kp ESC>, <&kp ESC>, <&kp ESC>, <&kp ESC>, <&kp COLON>, <&kp W>, <&kp ENTER>;
   };
   _cmd_alt_n: macro_cmd_alt_n {
     compatible = "zmk,behavior-macro";

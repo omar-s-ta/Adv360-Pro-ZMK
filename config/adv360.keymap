@@ -23,14 +23,6 @@
           flavor = "tap-preferred";
           bindings = <&kp>, <&kp>;
       };
-
-      hold_tap_e: hold_tap_e_behavior {
-          compatible = "zmk,behavior-hold-tap";
-          #binding-cells = <2>;
-          tapping-term-ms = <200>;
-          flavor = "tap-preferred";
-          bindings = <&kp>, <&kp>;
-      };
     };
 
   keymap {
@@ -39,8 +31,8 @@
     default_layer {
       bindings = <
         &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog 1                                                           &mo 3  &kp N6 &kp N7   &kp N8    &kp N9   &kp N0   &kp MINUS
-        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &tog 4                                                           &tog 7 &kp Y  &kp U    &kp I     &kp O    &kp P    &kp BSLH
-        &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &tog 6          &kp LCTRL &kp LGUI &kp RGUI  &kp RCTRL           &tog 5 &kp H  &kp J    &kp K     &kp L    &kp SEMI &kp SQT
+        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &tog 7                                                           &tog 6 &kp Y  &kp U    &kp I     &kp O    &kp P    &kp BSLH
+        &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &tog 4          &kp LCTRL &kp LGUI &kp RGUI  &kp RCTRL           &tog 5 &kp H  &kp J    &kp K     &kp L    &kp SEMI &kp SQT
         &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp LALT &kp PG_UP                            &kp N  &kp M    &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
         &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp SPACE &kp BSPC &kp END  &kp PG_DN &kp ENTER &kp SPACE               &kp DOWN &kp UP    &kp LBKT &kp RBKT &mo 2
       >;
@@ -48,19 +40,19 @@
     keypad {
       bindings = <
         &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &trans                                                           &mo 3  &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
-        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &tog 4                                                           &tog 7 &kp Y  &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp BSLH
-        &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &tog 6          &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &tog 5 &kp H  &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &kp SQT
+        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &tog 7                                                           &tog 6 &kp Y  &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp BSLH
+        &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &tog 4          &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &tog 5 &kp H  &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &kp SQT
         &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp HOME &kp PG_UP                            &kp N  &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &kp RSHFT
         &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp KP_N0               &kp DOWN   &kp UP       &kp KP_DOT    &kp RBKT        &mo 2
       >;
     };
     fn {
       bindings = <
-        &kp F1    &kp F2        &kp F3       &kp F4         &kp F5        &kp F6 &tog 1                                                         &mo 3  &kp F7   &kp F8        &kp F9        &kp F10   &kp F11   &kp F12 
-        &trans    &macro_quotes &trans       &trans         &_tmux_SRC    &trans &tog 4                                                         &tog 7 &trans   &_tmux_URLS   &trans        &trans    &trans    &trans
-        &_tmux_CW &_cmd_alt_n   &_tmux_SPLTV &macro_dquotes &trans        &trans &tog 6      &_tmux_L     &trans   &kp C_MUTE   &_tmux_L        &tog 5 &kp LEFT &kp DOWN      &kp UP        &kp RIGHT &_tmux_RN &trans
-        &trans    &trans        &trans       &_tmux_NW      &_tmux_SPLTH  &trans                          &kp HOME &kp C_VOL_UP                        &trans   &trans        &trans        &trans    &trans    &trans
-        &trans    &trans        &trans       &_tmux_P_RE_R  &_tmux_P_RE_L              &_tmux_PRV &kp DEL &kp END  &kp C_VOL_DN &trans &_tmux_NXT               &_tmux_P_RE_D &_tmux_P_RE_U &trans    &trans    &trans
+        &kp F1    &kp F2        &kp F3       &kp F4           &kp F5            &kp F6 &tog 1                                                         &mo 3  &kp F7   &kp F8           &kp F9         &kp F10   &kp F11   &kp F12 
+        &trans    &macro_quotes &trans       &trans           &_tmux_SRC        &trans &tog 7                                                         &tog 6 &trans   &_tmux_URLS      &trans         &trans    &trans    &trans
+        &_tmux_CW &_cmd_alt_n   &_nvim_SPLTV &macro_dquotes   &trans            &trans &tog 4      &_tmux_L     &trans   &kp C_MUTE   &_tmux_L        &tog 5 &kp LEFT &kp DOWN         &kp UP         &kp RIGHT &_tmux_RN &trans
+        &trans    &trans        &trans       &_tmux_NW        &_nvim_SPLTH      &trans                          &kp HOME &kp C_VOL_UP                        &trans   &trans           &trans         &trans    &trans    &trans
+        &trans    &trans        &trans       &kp RS(RC(LEFT)) &kp RS(RC(RIGHT))              &_tmux_PRV &kp DEL &kp END  &kp C_VOL_DN &trans &_tmux_NXT               &kp RS(RC(DOWN)) &kp RS(RC(UP)) &trans    &trans    &trans
       >;
     };
     mod {
@@ -75,8 +67,8 @@
     shift_layer {
       bindings = <
         &kp RS(EQUAL) &kp RS(N1)    &kp RS(N2) &kp RS(N3)   &kp RS(N4)     &kp RS(N5) &tog 1                                                              &mo 3  &kp LS(N6) &kp LS(N7)   &kp LS(N8)    &kp LS(N9)   &kp LS(N0)   &kp LS(MINUS)
-        &kp RS(TAB)   &kp RS(Q)     &kp RS(W)  &kp RS(E)    &kp RS(R)      &kp RS(T)  &tog 4                                                              &tog 7 &kp LS(Y)  &kp LS(U)    &kp LS(I)     &kp LS(O)    &kp LS(P)    &kp LS(BSLH)
-        &kp RS(ESC)   &kp RS(A)     &kp RS(S)  &kp RS(D)    &kp RS(F)      &kp RS(G)  &tog 6   &kp LS(LCTRL) &kp LS(LGUI) &kp RS(RGUI)  &kp RS(RCTRL)     &tog 5 &kp LS(H)  &kp LS(J)    &kp LS(K)     &kp LS(L)    &kp LS(SEMI) &kp LS(SQT)
+        &kp RS(TAB)   &kp RS(Q)     &kp RS(W)  &kp RS(E)    &kp RS(R)      &kp RS(T)  &tog 7                                                              &tog 6 &kp LS(Y)  &kp LS(U)    &kp LS(I)     &kp LS(O)    &kp LS(P)    &kp LS(BSLH)
+        &kp RS(ESC)   &kp RS(A)     &kp RS(S)  &kp RS(D)    &kp RS(F)      &kp RS(G)  &tog 4   &kp LS(LCTRL) &kp LS(LGUI) &kp RS(RGUI)  &kp RS(RCTRL)     &tog 5 &kp LS(H)  &kp LS(J)    &kp LS(K)     &kp LS(L)    &kp LS(SEMI) &kp LS(SQT)
         &kp LSHFT     &kp RS(Z)     &kp RS(X)  &kp RS(C)    &kp RS(V)      &kp RS(B)                         &kp LS(LALT) &kp RS(PG_UP)                          &kp LS(N)  &kp LS(M)    &kp LS(COMMA) &kp LS(DOT)  &kp LS(FSLH) &kp RSHFT
         &mo 2         &kp RS(GRAVE) &none      &kp RS(LEFT) &kp RS(RIGHT)                 &kp SPACE &kp BSPC &kp LS(END)  &kp RS(PG_DN) &kp RS(ENTER) &kp SPACE             &kp LS(DOWN) &kp LS(UP)    &kp LS(LBKT) &kp LS(RBKT) &mo 2
       >;
@@ -84,28 +76,28 @@
     punctuation_layer {
       bindings = <
         &kp PLUS  &kp N1   &kp N2   &kp N3    &kp N4     &kp N5    &tog 1                                                           &mo 3  &kp N6    &kp N7   &kp N8   &kp N9   &kp N0    &kp UNDER
-        &kp TAB   &kp SQT  &kp LT   &kp EQUAL &kp GT     &kp TILDE &tog 4                                                           &tog 7 &kp CARET &kp LPAR &kp RPAR &kp STAR &kp PRCNT &kp PIPE
-        &kp ESC   &kp AT   &kp DLLR &kp DQT   &kp FSLH   &kp GRAVE &tog 6          &kp LCTRL &kp LGUI &kp RGUI  &kp RCTRL           &tog 5 &kp HASH  &kp LBRC &kp RBRC &kp AMPS &kp COLON &kp QMARK
+        &kp TAB   &kp SQT  &kp LT   &kp EQUAL &kp GT     &kp TILDE &tog 4                                                           &tog 6 &kp CARET &kp LPAR &kp RPAR &kp STAR &kp PRCNT &kp PIPE
+        &kp ESC   &kp AT   &kp DLLR &kp DQT   &kp FSLH   &kp GRAVE &tog 7          &kp LCTRL &kp LGUI &kp RGUI  &kp RCTRL           &tog 5 &kp HASH  &kp LBRC &kp RBRC &kp AMPS &kp COLON &kp QMARK
         &kp LSHFT &kp Z    &kp X    &kp COMMA &kp EXCL   &kp BSLH                            &kp LALT &kp PG_UP                            &kp DOT   &kp LBKT &kp RBKT &kp DOT  &kp FSLH  &kp RSHFT
         &mo 2     &none    &none    &kp LEFT  &kp RIGHT                   &kp SPACE &kp BSPC &kp END  &kp PG_DN &kp ENTER &kp SPACE                  &kp DOWN &kp UP   &kp LBKT &kp RBKT  &mo 2
       >;
     };
     shell_layer {
       bindings = <
-        &none &_tmux_N0  &_tmux_N1    &_tmux_N2        &_tmux_N3         &_tmux_N4 &tog 1                                                            &mo 3  &none     &none            &none          &none     &none     &none
-        &none &_vim_EXIT &_vim_SAVE   &none            &none             &none     &tog 4                                                            &tog 7 &none     &_tmux_URLS      &none          &none     &none     &none
-        &none &none      &_nvim_SPLTV &none            &none             &none     &tog 6           &kp LCTRL &kp LGUI &kp RGUI  &kp RCTRL           &tog 5 &kp LC(H) &kp LC(J)        &kp LC(K)      &kp LC(L) &_vim_CMD &none
-        &none &none      &_tmux_CW    &none            &_nvim_SPLTH      &none                                &kp LALT &kp PG_UP                            &none     &none            &none          &none     &none     &none
-        &mo 2 &none      &none        &kp RS(RC(LEFT)) &kp RS(RC(RIGHT))                   &kp SPACE &kp BSPC &kp END  &kp PG_DN &kp ENTER &kp SPACE                  &kp LS(LC(DOWN)) &kp LS(LC(UP)) &none     &none     &mo 2
+        &none &_tmux_N0  &_tmux_N1    &_tmux_N2     &_tmux_N3     &_tmux_N4 &tog 1                                                            &mo 3  &none     &none         &none         &none     &none     &none
+        &none &_vim_EXIT &_vim_SAVE   &none         &none         &none     &tog 7                                                            &tog 6 &none     &_tmux_URLS   &none         &none     &none     &none
+        &none &none      &_tmux_SPLTV &none         &none         &none     &tog 4           &kp LCTRL &kp LGUI &kp RGUI  &kp RCTRL           &tog 5 &kp LC(H) &kp LC(J)     &kp LC(K)     &kp LC(L) &_vim_CMD &none
+        &none &none      &_tmux_CW    &none         &_tmux_SPLTH  &none                                &kp LALT &kp PG_UP                            &none     &none         &none         &none     &none     &none
+        &mo 2 &none      &none        &_tmux_P_RE_L &_tmux_P_RE_R                   &kp SPACE &kp BSPC &kp END  &kp PG_DN &kp ENTER &kp SPACE                  &_tmux_P_RE_D &_tmux_P_RE_U &none     &none     &mo 2
       >;
     };
     utils_layer {
       bindings = <
-        &none &none &none &none               &none &none     &tog 1                                                            &mo 3  &none       &none         &none       &none       &none &none
-        &none &none &none &hold_tap_e E EQUAL &none &kp RG(T) &tog 4                                                            &tog 7 &none       &kp LG(LS(U)) &none       &kp LG(O)   &none &none
-        &none &none &none &none               &none &none     &tog 6           &kp LCTRL &kp LGUI &kp RGUI  &kp RCTRL           &tog 5 &_cmd_alt_L &_cmd_alt_D   &_cmd_alt_U &_cmd_alt_R &none &none
-        &none &none &none &none               &none &kp RG(B)                            &kp LALT &kp PG_UP                            &none       &none         &none       &none       &none &none
-        &mo 2 &none &none &none               &none                   &kp SPACE &kp BSPC &kp END  &kp PG_DN &kp ENTER &kp SPACE                    &none         &none       &none       &none &mo 2
+        &none &none &none &none       &none     &none     &tog 1                                                            &mo 3  &none       &none         &none       &none       &none &none
+        &none &none &none &hm E EQUAL &none     &kp RG(T) &tog 7                                                            &tog 6 &none       &kp LG(LS(U)) &none       &kp LG(O)   &none &none
+        &none &none &none &none       &none     &none     &tog 4           &kp LCTRL &kp LGUI &kp RGUI  &kp RCTRL           &tog 5 &_cmd_alt_L &_cmd_alt_D   &_cmd_alt_U &_cmd_alt_R &none &none
+        &none &none &none &kp RG(C)   &kp RG(V) &kp RG(B)                            &kp LALT &kp PG_UP                            &none       &none         &none       &none       &none &none
+        &mo 2 &none &none &none       &none                       &kp SPACE &kp BSPC &kp END  &kp PG_DN &kp ENTER &kp SPACE                    &none         &none       &none       &none &mo 2
       >;
     };
   };

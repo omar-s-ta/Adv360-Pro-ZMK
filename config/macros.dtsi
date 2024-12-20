@@ -32,13 +32,55 @@
     compatible = "zmk,behavior-macro";
     label = "macro_kinesis";
     #binding-cells = <0>;
-    bindings = <&kp LS(K)>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
+    bindings = <&kp W>, <&kp A>, <&kp T>, <&kp C>, <&kp H>, <&kp I>, <&kp T>, <&kp G>, <&kp O>, <&kp N5>, <&kp N3>, <&kp N0>, <&kp EXCL>;
   };
   _tmux_L: macro_tmux_leader {
     compatible = "zmk,behavior-macro";
     label = "macro_tmux_leader";
     #binding-cells = <0>;
     bindings = <&kp LC(S)>;
+  };
+  _tmux_URLS: macro_tmux_urls {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_urls";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp U>;
+  };
+  _tmux_SRC: macro_tmux_src {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_src";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp R>;
+  };
+  _tmux_N0: macro_tmux_n0 {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_n0";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp N0>;
+  };
+  _tmux_N1: macro_tmux_n1 {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_n1";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp N1>;
+  };
+  _tmux_N2: macro_tmux_n2 {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_n2";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp N2>;
+  };
+  _tmux_N3: macro_tmux_n3 {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_n3";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp N3>;
+  };
+  _tmux_N4: macro_tmux_n4 {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_n4";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp N4>;
   };
   _tmux_NW: macro_tmux_new_window {
     compatible = "zmk,behavior-macro";
@@ -106,17 +148,71 @@
     #binding-cells = <0>;
     bindings = <&kp LC(S)>, <&kp L>;
   };
+  _tmux_P_RE_R: macro_tmux_pane_resize_right {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_pane_resize_right";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp LA(RIGHT)>;
+  };
+  _tmux_P_RE_D: macro_tmux_pane_resize_down {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_pane_resize_down";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp LA(DOWN)>;
+  };
+  _tmux_P_RE_U: macro_tmux_pane_resize_up {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_pane_resize_up";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp LA(UP)>;
+  };
+  _tmux_P_RE_L: macro_tmux_pane_resize_left {
+    compatible = "zmk,behavior-macro";
+    label = "macro_tmux_pane_resize_left";
+    #binding-cells = <0>;
+    bindings = <&kp LC(S)>, <&kp LA(LEFT)>;
+  };
   _nvim_SPLTV: macro_nvim_split_v {
     compatible = "zmk,behavior-macro";
     label = "macro_nvim_split_v";
     #binding-cells = <0>;
     bindings = <&kp SPACE>, <&kp LS(BSLH)>;
   };
+  _nvim_SPLTH: macro_nvim_split_h {
+    compatible = "zmk,behavior-macro";
+    label = "macro_nvim_split_v";
+    #binding-cells = <0>;
+    bindings = <&kp SPACE>, <&kp MINUS>;
+  };
+  _vim_CMD: macro_vim_cmd {
+    compatible = "zmk,behavior-macro";
+    label = "macro_vim_cmd";
+    #binding-cells = <0>;
+    bindings = <&kp ESC>, <&kp ESC>, <&kp ESC>, <&kp ESC>, <&kp COLON>;
+  };
+  _vim_EXIT: macro_vim_exit {
+    compatible = "zmk,behavior-macro";
+    label = "macro_vim_exit";
+    #binding-cells = <0>;
+    bindings = <&kp ESC>, <&kp ESC>, <&kp ESC>, <&kp ESC>, <&kp COLON>, <&kp Q>;
+  };
+  _vim_SAVE: macro_vim_save {
+    compatible = "zmk,behavior-macro";
+    label = "macro_vim_save";
+    #binding-cells = <0>;
+    bindings = <&kp ESC>, <&kp ESC>, <&kp ESC>, <&kp ESC>, <&kp COLON>, <&kp W>;
+  };
   _cmd_alt_n: macro_cmd_alt_n {
     compatible = "zmk,behavior-macro";
     label = "macro_cmd_alt_n";
     #binding-cells = <0>;
     bindings = <&macro_press &kp LGUI>, <&macro_press &kp LALT>, <&macro_tap &kp N>, <&macro_release &kp LALT>, <&macro_release &kp LGUI>;
+  };
+  _cmd_alt_L: macro_cmd_alt_left {
+    compatible = "zmk,behavior-macro";
+    label = "macro_cmd_alt_left";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LGUI>, <&macro_press &kp LALT>, <&macro_tap &kp LEFT>, <&macro_release &kp LALT>, <&macro_release &kp LGUI>;
   };
   _cmd_alt_U: macro_cmd_alt_up {
     compatible = "zmk,behavior-macro";
@@ -129,4 +225,10 @@
     label = "macro_cmd_alt_down";
     #binding-cells = <0>;
     bindings = <&macro_press &kp LGUI>, <&macro_press &kp LALT>, <&macro_tap &kp DOWN>, <&macro_release &kp LALT>, <&macro_release &kp LGUI>;
+  };
+  _cmd_alt_R: macro_cmd_alt_right {
+    compatible = "zmk,behavior-macro";
+    label = "macro_cmd_alt_right";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LGUI>, <&macro_press &kp LALT>, <&macro_tap &kp RIGHT>, <&macro_release &kp LALT>, <&macro_release &kp LGUI>;
   };

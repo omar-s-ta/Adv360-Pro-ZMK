@@ -20,7 +20,6 @@
           compatible = "zmk,behavior-hold-tap";
           #binding-cells = <2>;
           tapping-term-ms = <200>;
-          quick_tap_ms = <175>;
           flavor = "tap-preferred";
           bindings = <&kp>, <&kp>;
       };
@@ -29,9 +28,8 @@
           compatible = "zmk,behavior-hold-tap";
           #binding-cells = <0>;
           tapping-term-ms = <200>;
-          quick_tap_ms = <175>;
           flavor = "tap-preferred";
-          bindings = <&kp E>, <&kp EQUAL>;
+          bindings = <&kp>, <&kp>;
       };
     };
 
@@ -103,11 +101,11 @@
     };
     utils_layer {
       bindings = <
-        &none &none &none &none       &none &none     &tog 1                                                            &mo 3  &none       &none         &none       &none       &none &none
-        &none &none &none &hold_tap_e &none &kp RG(T) &tog 4                                                            &tog 8 &none       &kp LG(LS(U)) &none       &kp LG(O)   &none &none
-        &none &none &none &none       &none &none     &tog 6           &kp LCTRL &kp LGUI &kp RGUI  &kp RCTRL           &tog 5 &_cmd_alt_L &_cmd_alt_D   &_cmd_alt_U &_cmd_alt_R &none &none
-        &none &none &none &none       &none &kp RG(B)                            &kp LALT &kp PG_UP                            &none       &none         &none       &none       &none &none
-        &mo 2 &none &none &none       &none                   &kp SPACE &kp BSPC &kp END  &kp PG_DN &kp ENTER &kp SPACE                    &none         &none       &none       &none &mo 2
+        &none &none &none &none               &none &none     &tog 1                                                            &mo 3  &none       &none         &none       &none       &none &none
+        &none &none &none &hold_tap_e E EQUAL &none &kp RG(T) &tog 4                                                            &tog 8 &none       &kp LG(LS(U)) &none       &kp LG(O)   &none &none
+        &none &none &none &none               &none &none     &tog 6           &kp LCTRL &kp LGUI &kp RGUI  &kp RCTRL           &tog 5 &_cmd_alt_L &_cmd_alt_D   &_cmd_alt_U &_cmd_alt_R &none &none
+        &none &none &none &none               &none &kp RG(B)                            &kp LALT &kp PG_UP                            &none       &none         &none       &none       &none &none
+        &mo 2 &none &none &none               &none                   &kp SPACE &kp BSPC &kp END  &kp PG_DN &kp ENTER &kp SPACE                    &none         &none       &none       &none &mo 2
       >;
     };
   };

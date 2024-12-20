@@ -41,7 +41,7 @@
     };
     keypad {
       bindings = <
-        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &trans                                                           &mo 3  &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
+        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog 1                                                           &mo 3  &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
         &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &tog 7                                                           &tog 6 &kp Y  &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp BSLH
         &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &tog 4          &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &tog 5 &kp H  &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &kp SQT
         &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp HOME &kp PG_UP                            &kp N  &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &kp RSHFT
@@ -78,8 +78,8 @@
     punctuation_layer {
       bindings = <
         &kp PLUS  &kp N1   &kp N2   &kp N3    &kp N4     &kp N5    &tog 1                                                           &mo 3  &kp N6    &kp N7   &kp N8   &kp N9   &kp N0    &kp UNDER
-        &kp TAB   &kp SQT  &kp LT   &kp EQUAL &kp GT     &kp TILDE &tog 4                                                           &tog 6 &kp CARET &kp LPAR &kp RPAR &kp STAR &kp PRCNT &kp PIPE
-        &kp ESC   &kp AT   &kp DLLR &kp DQT   &kp FSLH   &kp GRAVE &tog 7          &kp LCTRL &kp LGUI &kp RGUI  &kp RCTRL           &tog 5 &kp HASH  &kp LBRC &kp RBRC &kp AMPS &kp COLON &kp QMARK
+        &kp TAB   &kp SQT  &kp LT   &kp EQUAL &kp GT     &kp TILDE &tog 7                                                           &tog 6 &kp CARET &kp LPAR &kp RPAR &kp STAR &kp PRCNT &kp PIPE
+        &kp ESC   &kp AT   &kp DLLR &kp DQT   &kp FSLH   &kp GRAVE &tog 4          &kp LCTRL &kp LGUI &kp RGUI  &kp RCTRL           &tog 5 &kp HASH  &kp LBRC &kp RBRC &kp AMPS &kp COLON &kp QMARK
         &kp LSHFT &kp Z    &kp X    &kp COMMA &kp EXCL   &kp BSLH                            &kp LALT &kp PG_UP                            &kp DOT   &kp LBKT &kp RBKT &kp DOT  &kp FSLH  &kp RSHFT
         &mo 2     &none    &none    &kp LEFT  &kp RIGHT                   &kp SPACE &kp BSPC &kp END  &kp PG_DN &kp ENTER &kp SPACE                  &kp DOWN &kp UP   &kp LBKT &kp RBKT  &mo 2
       >;
@@ -96,7 +96,7 @@
     utils_layer {
       bindings = <
         &none &none &none &none       &none     &none     &tog 1                                                            &mo 3  &none       &none         &none       &none       &none &none
-        &none &none &none &hm E EQUAL &none     &kp RG(T) &tog 7                                                            &tog 6 &none       &kp LG(LS(U)) &none       &kp LG(O)   &none &none
+        &none &none &none &hm EQUAL E &none     &kp RG(T) &tog 7                                                            &tog 6 &none       &kp LG(LS(U)) &none       &kp LG(O)   &none &none
         &none &none &none &none       &none     &none     &tog 4           &kp LCTRL &kp LGUI &kp RGUI  &kp RCTRL           &tog 5 &_cmd_alt_L &_cmd_alt_D   &_cmd_alt_U &_cmd_alt_R &none &none
         &none &none &none &kp RG(C)   &kp RG(V) &kp RG(B)                            &kp LALT &kp PG_UP                            &none       &none         &none       &none       &none &none
         &mo 2 &none &none &none       &none                       &kp SPACE &kp BSPC &kp END  &kp PG_DN &kp ENTER &kp SPACE                    &none         &none       &none       &none &mo 2

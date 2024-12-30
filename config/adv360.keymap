@@ -25,14 +25,6 @@
           flavor = "tap-preferred";
           bindings = <&kp>, <&kp>;
       };
-
-      hm_E: homerow_mods_E {
-          compatible = "zmk,behavior-hold-tap";
-          #binding-cells = <0>;
-          tapping-term-ms = <200>;
-          flavor = "tap-preferred";
-          bindings = <&kp E>, <&kp EQUAL>;
-      };
     };
 
   keymap {
@@ -40,11 +32,11 @@
 
     default_layer {
       bindings = <
-        &kp EQUAL &kp N1    &kp N2   &kp N3      &kp N4     &kp N5 &tog 1                                                           &mo 3  &kp N6 &kp N7   &kp N8    &kp N9   &kp N0   &kp MINUS
-        &kp TAB   &kp Q     &kp W    &hm EQUAL E &kp R      &kp T  &tog 7                                                           &tog 6 &kp Y  &kp U    &kp I     &kp O    &kp P    &kp BSLH
-        &kp ESC   &kp A     &kp S    &kp D       &kp F      &kp G  &tog 4          &kp LCTRL &kp LGUI &kp RGUI  &kp RCTRL           &tog 5 &kp H  &kp J    &kp K     &kp L    &kp SEMI &kp SQT
-        &kp LSHFT &kp Z     &kp X    &kp C       &kp V      &kp B                            &kp LALT &kp PG_UP                            &kp N  &kp M    &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-        &mo 2     &kp GRAVE &kp CAPS &kp LEFT    &kp RIGHT                &kp SPACE &kp BSPC &kp END  &kp PG_DN &kp ENTER &kp SPACE               &kp DOWN &kp UP    &kp LBKT &kp RBKT &mo 2
+        &kp EQUAL &kp N1      &kp N2     &kp N3      &kp N4     &kp N5      &tog 1                                                           &mo 3  &kp N6      &kp N7     &kp N8          &kp N9     &kp N0     &kp MINUS
+        &kp TAB   &hm QMARK Q &hm LT W   &hm EQUAL E &hm GT R   &hm TILDE T &tog 7                                                           &tog 6 &hm CARET Y &hm DLLR U &hm EXCL I      &kp O      &hm PLUS P &kp BSLH
+        &kp ESC   &hm AT A    &hm LBKT S &hm LBRC D  &hm LPAR F &hm GRAVE G &tog 4          &kp LCTRL &kp LGUI &kp RGUI  &kp RCTRL           &tog 5 &hm HASH H  &hm RPAR J &hm RBRC K      &hm RBKT L &kp SEMI   &kp SQT
+        &kp LSHFT &kp Z       &kp X      &kp C       &kp V      &hm FSLH B                            &kp LALT &kp PG_UP                            &hm BSLH N  &hm STAR M &hm PRCNT COMMA &kp DOT    &kp FSLH   &kp RSHFT
+        &mo 2     &kp GRAVE   &kp CAPS   &kp LEFT    &kp RIGHT                     &kp SPACE &kp BSPC &kp END  &kp PG_DN &kp ENTER &kp SPACE                    &kp DOWN   &kp UP          &kp LBKT   &kp RBKT   &mo 2
       >;
     };
     keypad {
@@ -104,7 +96,7 @@
     utils_layer {
       bindings = <
         &none &none &none &none     &none     &none     &tog 1                                                            &mo 3  &none       &none         &none       &none       &none &none
-        &none &none &none &hm_E     &none     &kp RG(T) &tog 7                                                            &tog 6 &none       &kp LG(LS(U)) &none       &kp LG(O)   &none &none
+        &none &none &none &none     &none     &kp RG(T) &tog 7                                                            &tog 6 &none       &kp LG(LS(U)) &none       &kp LG(O)   &none &none
         &none &none &none &none     &none     &none     &tog 4           &kp LCTRL &kp LGUI &kp RGUI  &kp RCTRL           &tog 5 &_cmd_alt_L &_cmd_alt_D   &_cmd_alt_U &_cmd_alt_R &none &none
         &none &none &none &kp RG(C) &kp RG(V) &kp RG(B)                            &kp LALT &kp PG_UP                            &none       &none         &none       &none       &none &none
         &mo 2 &none &none &none     &none                       &kp SPACE &kp BSPC &kp END  &kp PG_DN &kp ENTER &kp SPACE                    &none         &none       &none       &none &mo 2

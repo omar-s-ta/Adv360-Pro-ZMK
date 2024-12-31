@@ -21,7 +21,7 @@
       hm: homerow_mods {
           compatible = "zmk,behavior-hold-tap";
           #binding-cells = <2>;
-          tapping-term-ms = <200>;
+          tapping-term-ms = <150>;
           flavor = "tap-preferred";
           bindings = <&kp>, <&kp>;
       };
@@ -34,7 +34,7 @@
       bindings = <
         &kp EQUAL &kp N1      &kp N2     &kp N3      &kp N4     &kp N5      &tog 1                                                           &mo 3  &kp N6      &kp N7     &kp N8          &kp N9     &kp N0     &kp MINUS
         &kp TAB   &hm QMARK Q &hm LT W   &hm EQUAL E &hm GT R   &hm TILDE T &tog 7                                                           &tog 6 &hm CARET Y &hm DLLR U &hm EXCL I      &kp O      &hm PLUS P &kp BSLH
-        &kp ESC   &hm AT A    &hm LBKT S &hm LBRC D  &hm LPAR F &hm GRAVE G &tog 4          &kp LCTRL &kp LGUI &kp RGUI  &kp RCTRL           &tog 5 &hm HASH H  &hm RPAR J &hm RBRC K      &hm RBKT L &kp SEMI   &kp SQT
+        &kp ESC   &hm AT A    &hm RBKT S &hm RBRC D  &hm RPAR F &hm GRAVE G &tog 4          &kp LCTRL &kp LGUI &kp RGUI  &kp RCTRL           &tog 5 &hm HASH H  &hm LPAR J &hm LBRC K      &hm LBKT L &kp SEMI   &kp SQT
         &kp LSHFT &kp Z       &kp X      &kp C       &kp V      &hm FSLH B                            &kp LALT &kp PG_UP                            &hm BSLH N  &hm STAR M &hm PRCNT COMMA &kp DOT    &kp FSLH   &kp RSHFT
         &mo 2     &kp GRAVE   &kp CAPS   &kp LEFT    &kp RIGHT                     &kp SPACE &kp BSPC &kp END  &kp PG_DN &kp ENTER &kp SPACE                    &kp DOWN   &kp UP          &kp LBKT   &kp RBKT   &mo 2
       >;
